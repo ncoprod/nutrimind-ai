@@ -31,6 +31,7 @@
 - [🔧 Development](#-development)
 - [📱 API Reference](#-api-reference)
 - [🤝 Contributing](#-contributing)
+- [🔒 Security](#-security)
 - [📄 License](#-license)
 
 ---
@@ -135,7 +136,7 @@
 
 3. **Set up environment variables**
    ```bash
-   cp .env.example .env.local
+   cp env.example .env.local
    ```
 
    Edit `.env.local` with your API keys:
@@ -144,6 +145,8 @@
    VITE_SUPABASE_URL=your_supabase_project_url
    VITE_SUPABASE_ANON_KEY=your_supabase_anon_key
    ```
+
+   ⚠️ **SECURITY WARNING**: Never commit `.env.local` to git! This file is automatically ignored.
 
 4. **Start the development server**
    ```bash
@@ -360,6 +363,29 @@ We welcome contributions! Please follow these steps:
 - **Performance**: Optimization and performance improvements
 - **Internationalization**: Support for additional languages
 - **Testing**: Unit and integration tests
+
+---
+
+## 🔒 Security
+
+### API Keys and Sensitive Data
+
+**CRITICAL**: This project uses environment variables for API keys. **NEVER commit `.env` files to git.**
+
+- ✅ Use `env.example` as a template
+- ✅ Store actual keys in `.env.local`
+- ✅ The `.gitignore` protects against accidental commits
+- ❌ Never share API keys publicly
+- ❌ Never commit files containing secrets
+
+### Reporting Security Issues
+
+If you discover a security vulnerability, please report it responsibly:
+- **Do NOT** open a public issue
+- Open a private security advisory on GitHub
+- Or contact the maintainers directly
+
+See [SECURITY.md](SECURITY.md) for complete security guidelines.
 
 ---
 
