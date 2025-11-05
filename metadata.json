@@ -1,0 +1,5 @@
+{
+  "name": "NutriMIND",
+  "description": "An automated nutritional coaching web application that combines scientific calculations, artificial intelligence, and behavioral tracking for weight and nutrition management. It provides personalized meal plans, progress tracking, and adaptive feedback to help users achieve their health goals.",
+  "requestFramePermissions": []
+}

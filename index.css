@@ -1,0 +1,103 @@
+/* Additional styles if needed */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Theme variables (light/dark) */
+:root {
+  --background: #f8fafc; /* clair */
+  --card: #ffffff;
+  --border: #e2e8f0;
+  --input: #ffffff;
+  --foreground: #0f172a;
+  --muted-foreground: #64748b;
+  /* Couleurs marque - retrouver l'orange d'origine */
+  --primary: #ff6a3d; /* orange profond */
+  --primary-foreground: #ffffff;
+  --secondary: #ffd3c6; /* orange clair en secondaire */
+  --secondary-foreground: #0f172a;
+  --accent: #FF7A62; /* orange brand */
+  --accent-foreground: #ffffff;
+  --destructive: #ef4444;
+  --destructive-foreground: #ffffff;
+  --protein: #22c55e;
+  --carbs: #0ea5e9;
+  --fats: #f59e0b;
+}
+
+.dark {
+  --background: #0b0f19; /* noir/gris foncé */
+  --card: #0f1524;
+  --border: #1f2937;
+  --input: #0b0f19;
+  --foreground: #e5e7eb;
+  --muted-foreground: #9aa6b2;
+  /* garder l'orange en dark */
+  --primary: #ff6a3d;
+  --primary-foreground: #0b0f19;
+  --secondary: #261a15;
+  --secondary-foreground: #ffd3c6;
+  --accent: #FF7A62;
+  --accent-foreground: #0b0f19;
+  --destructive: #ef4444;
+  --destructive-foreground: #0b0f19;
+  --protein: #4ade80;
+  --carbs: #38bdf8;
+  --fats: #fbbf24;
+}
+
+/* Utility mappings to CSS variables (minimal set used widely) */
+.bg-card { background-color: var(--card); }
+.bg-input { background-color: var(--input); }
+.bg-primary { background-color: var(--primary); }
+.bg-secondary { background-color: var(--secondary); }
+.bg-accent { background-color: var(--accent); }
+.bg-destructive { background-color: var(--destructive); }
+.text-primary-foreground { color: var(--primary-foreground); }
+.text-secondary-foreground { color: var(--secondary-foreground); }
+.text-accent-foreground { color: var(--accent-foreground); }
+.text-destructive-foreground { color: var(--destructive-foreground); }
+.text-foreground { color: var(--foreground); }
+.text-muted-foreground { color: var(--muted-foreground); }
+.text-protein { color: var(--protein); }
+.text-carbs { color: var(--carbs); }
+.text-fats { color: var(--fats); }
+.bg-protein { background-color: var(--protein); }
+.bg-carbs { background-color: var(--carbs); }
+.bg-fats { background-color: var(--fats); }
+.border-border { border-color: var(--border); }
+.text-primary { color: var(--primary); }
+.text-accent { color: var(--accent); }
+
+@layer utilities {
+  @keyframes slide-in-right {
+    from {
+      opacity: 0;
+      transform: translateX(100%);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes slide-in-down {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-slide-in-right {
+    animation: slide-in-right 0.3s ease-out;
+  }
+
+  .animate-slide-in-down {
+    animation: slide-in-down 0.2s ease-out;
+  }
+}
